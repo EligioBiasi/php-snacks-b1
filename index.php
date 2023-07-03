@@ -38,9 +38,7 @@ $matches = [
         'point_team_2' => 89
     ],
 ]; 
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,6 +48,17 @@ $matches = [
     <title>Document</title>
 </head>
     <body>
-        
+        <?php foreach ($matches as $match){ ?>
+            <p>
+                <?php
+                    $team1 = $match['team1'];
+                    $team2 = $match['team2'];
+                    $points1 = $match['point_team_1'];
+                    $points2 = $match['point_team_2'];
+
+                    echo $team1 . " - " . $team2 . " | " . $points1 . "-" . $points2 . " " ;
+                ?>
+            </p>
+        <?php } ?>
     </body>
 </html>
